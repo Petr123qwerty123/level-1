@@ -1,0 +1,26 @@
+package main
+
+func main() {
+	//tasks.Task1()
+	//tasks.Task2()
+	//tasks.Task3()
+	//tasks.Task4()
+	//tasks.Task5()
+	//tasks.Task6_1()
+	//tasks.Task6_2()
+	//tasks.Task6_3()
+	//tasks.Task6_4()
+	//tasks.Task6_5()
+	//tasks.Task6_6()
+	//tasks.Task7()
+	//tasks.Task9()
+	//tasks.Task10()
+	//tasks.Task11()
+	//tasks.Task12()
+	//tasks.Task16()
+	//tasks.Task17()
+	//tasks.Task18()
+	//tasks.Task21()
+	//tasks.Task22()
+	//tasks.Task24()
+}
