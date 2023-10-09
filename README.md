@@ -32,7 +32,7 @@ func (b *Buffer) WriteString(s string) (n int, err error) {
 }
 ```
 
-### d) strings.Builder
+### c) strings.Builder
 
 `strings.Builder` также использует байтовый срез внутри для хранения.
 
