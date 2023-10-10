@@ -2,6 +2,16 @@ package tasks
 
 import "fmt"
 
+/*
+В этом примере у нас есть флэшка (FlashDrive), реализующая интерфейс DataStorage и карта памяти (SDMemoryCard),
+реализующая интерфейс MemoryCard и функция переноса данных на носитель (TransferData), принимающая в качестве
+одного из параметров объекты, реализующие DataStorage
+
+Чтобы мы могли переносить данные и на карту памяти (SDMemoryCard) с помощью функции переноса данных на носитель
+(TransferData), мы создали структуру переходник (MemoryCardAdapter), поддерживающий (реализующий) методы интерфейса
+DataStorage.
+*/
+
 type DataStorage interface {
 	Save(data string)
 	Load() string

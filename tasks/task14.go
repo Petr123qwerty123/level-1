@@ -4,7 +4,8 @@ import (
 	"reflect"
 )
 
-func Task14(x interface{}) string {
+// Task14 принимает на вход переменную любого типа, на выходе возвращает тип переменной в виде строки
+func Task14(x any) string {
 	t := reflect.TypeOf(x)
 
 	switch t.Kind() {

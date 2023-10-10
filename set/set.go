@@ -1,39 +1,43 @@
 package set
 
-type Item interface{}
-
-type Set struct {
-	items map[Item]bool
+type Set[ItemsType comparable] struct {
+	items map[ItemsType]bool
 }
 
-func NewSet() *Set {
-	s := &Set{}
+// NewSet - конструктор Set
+func NewSet[ItemsType comparable]() *Set[ItemsType] {
+	s := &Set[ItemsType]{}
 
-	s.items = make(map[Item]bool)
+	s.items = make(map[ItemsType]bool)
 
 	return s
 }
 
-func (s *Set) Add(t Item) {
+// Add добавляет элемент в множество
+func (s *Set[ItemsType]) Add(t ItemsType) {
 	s.items[t] = true
 }
 
-func (s *Set) Clear() {
-	s.items = make(map[Item]bool)
+// Clear очищает множество
+func (s *Set[ItemsType]) Clear() {
+	s.items = make(map[ItemsType]bool)
 }
 
-func (s *Set) Remove(item Item) {
+// Remove удаляет элемент по значению
+func (s *Set[ItemsType]) Remove(item ItemsType) {
 	delete(s.items, item)
 }
 
-func (s *Set) Contains(item Item) bool {
+// Contains проверяет на вхождение в множество элемент
+func (s *Set[ItemsType]) Contains(item ItemsType) bool {
 	_, exists := s.items[item]
 
 	return exists
 }
 
-func (s *Set) Items() []Item {
-	items := make([]Item, 0, len(s.items))
+// Items возвращает элементы множества
+func (s *Set[ItemsType]) Items() []ItemsType {
+	items := make([]ItemsType, 0, len(s.items))
 
 	for item := range s.items {
 		items = append(items, item)
@@ -42,8 +46,9 @@ func (s *Set) Items() []Item {
 	return items
 }
 
-func (s *Set) IntersectWith(other *Set) *Set {
-	intersection := NewSet()
+// IntersectWith возвращает пересечение с множеством other
+func (s *Set[ItemsType]) IntersectWith(other *Set[ItemsType]) *Set[ItemsType] {
+	intersection := NewSet[ItemsType]()
 
 	for item := range s.items {
 		if other.Contains(item) {

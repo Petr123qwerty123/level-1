@@ -2,6 +2,8 @@ package tasks
 
 import "fmt"
 
+// реализация псевдокода из статьи (https://ru.wikipedia.org/wiki/Быстрая_сортировка)
+
 func partition(arr []int, low, high int) int {
 	pivot := arr[high]
 

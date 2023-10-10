@@ -2,6 +2,8 @@ package tasks
 
 import "fmt"
 
+// реализация примеров на других языках из статьи (https://ru.wikipedia.org/wiki/Двоичный_поиск) на Go
+
 func binarySearch(arr []int, key int) int {
 	low := 0
 	high := len(arr) - 1

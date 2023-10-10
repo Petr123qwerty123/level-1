@@ -11,6 +11,7 @@ func (h *Human) GetFullName() string {
 	return fmt.Sprintf("%s %s", h.FirstName, h.LastName)
 }
 
+// встраиваем Human в Action
 type Action struct {
 	Human
 }
@@ -23,5 +24,6 @@ func Task1() {
 		},
 	}
 
+	// теперь можно использовать метод Human у объекта Action
 	fmt.Println(action.GetFullName())
 }

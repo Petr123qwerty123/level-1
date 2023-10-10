@@ -13,6 +13,7 @@ func NewConcurrencyMap[K comparable, V any]() *ConcurrencyMap[K, V] {
 	}
 }
 
+// Set прежде, чем записывать значение value по ключу k, - лочим на чтение и запись
 func (cm *ConcurrencyMap[K, V]) Set(key K, value V) {
 	cm.Lock()
 	defer cm.Unlock()

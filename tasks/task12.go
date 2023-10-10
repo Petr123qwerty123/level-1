@@ -8,11 +8,14 @@ import (
 func Task12() {
 	arr := []string{"cat", "cat", "dog", "cat", "tree"}
 
-	s := set.NewSet()
+	// создаем пустое множество
+	s := set.NewSet[string]()
 
+	// заполняем множество элементами слайса arr
 	for _, e := range arr {
 		s.Add(e)
 	}
 
+	// выводим элементы множества
 	fmt.Println(s.Items())
 }

@@ -22,6 +22,7 @@ import (
 неполученными извне (например, с помощью time.After()))
 */
 
+// Task6_1 отправка сигнала о завершении через канал
 func Task6_1() {
 	var wg sync.WaitGroup
 
@@ -52,6 +53,7 @@ func Task6_1() {
 	fmt.Println("main stop")
 }
 
+// Task6_2 отправка сигнала о завершении через контекст (отмена контекста)
 func Task6_2() {
 	var wg sync.WaitGroup
 
@@ -81,6 +83,7 @@ func Task6_2() {
 	fmt.Println("main stop")
 }
 
+// Task6_3 отправка сигнала о завершении через контекст (таймаут)
 func Task6_3() {
 	var wg sync.WaitGroup
 
@@ -108,6 +111,7 @@ func Task6_3() {
 	fmt.Println("main stop")
 }
 
+// Task6_4 отправка сигнала о завершении через глобальную переменную
 func Task6_4() {
 	var wg sync.WaitGroup
 
@@ -137,6 +141,7 @@ func Task6_4() {
 	fmt.Println("main stop")
 }
 
+// Task6_5 закрытие канала (проверка закрытия канала)
 func Task6_5() {
 	var wg sync.WaitGroup
 
@@ -172,6 +177,8 @@ func Task6_5() {
 	fmt.Println("main stop")
 }
 
+// Task6_6 логическое завершение работы горутины (отсутствие бесконечного цикла или валидное завершение этого цикла данными
+// неполученными извне (например, с помощью time.After()))
 func Task6_6() {
 	var wg sync.WaitGroup
 
